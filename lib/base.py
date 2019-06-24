@@ -15,8 +15,14 @@ SPI_DEVICE = 0
 pixels = Adafruit_WS2801.WS2801Pixels(
     PIXEL_COUNT, spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE), gpio=GPIO)
 
+led_stripe = Adafruit_WS2801.WS2801Pixels(PIXEL_COUNT, spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE), gpio=GPIO)
 
 class Base:
+
+    # led_stripe
+    # led_count
+    #
+    PIXEL_COUNT = 160
 
     def __init__(self):
         print("init base")
